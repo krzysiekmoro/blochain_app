@@ -3,8 +3,8 @@ import {LayoutConfig} from '../types/layout';
 
 export const defaultLayout = {
   title: 'Chain comparison',
-  width: 1400,
-  height: 900,
+  width: 1000,
+  height: 700,
   xaxis: {
     range: ['2023-04-03', '2023-04-10'],
     autorange: false,
