@@ -1,5 +1,4 @@
-
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
 import rawData from './data.json';
 import {dataFormatter} from './data-parser';
@@ -25,11 +24,13 @@ function App() {
     setLayout(layoutConfig(dateRange));
   }, [dateRange]);
 
-  const onRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value: DateType = e.target.value as DateType;
-    setDateRange(value);
-    setLayout(layoutConfig(dateRange));
-  };
+  const onRangeChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const value: DateType = e.target.value as DateType;
+      setDateRange(value);
+    },
+    [],
+  );
 
   return (
     <div className='App'>
