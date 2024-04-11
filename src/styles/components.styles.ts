@@ -20,7 +20,6 @@ export const StyledWrapper = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: red;
   align-items: center;
   justify-content: flex-end;
   padding: 10px;
