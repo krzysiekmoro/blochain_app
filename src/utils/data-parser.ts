@@ -1,5 +1,5 @@
-import { RawData } from "./types/raw-data";
-import * as Plotly from 'plotly.js'
+import {RawData} from '../types/raw-data';
+import * as Plotly from 'plotly.js';
 
 export const dataFormatter = (rawData: RawData): Plotly.Data[] => [
   {

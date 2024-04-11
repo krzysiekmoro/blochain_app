@@ -1,5 +1,15 @@
-import {DateType} from './types/date-range';
-import {LayoutConfig} from './types/layout';
+import {DateType} from '../types/date-range';
+import {LayoutConfig} from '../types/layout';
+
+export const defaultLayout = {
+  title: 'Chain comparison',
+  width: 1400,
+  height: 900,
+  xaxis: {
+    range: ['2023-04-03', '2023-04-10'],
+    autorange: false,
+  },
+};
 
 export const giveRange = (dateRange: DateType): string[] => {
   switch (dateRange) {
@@ -15,7 +25,7 @@ export const giveRange = (dateRange: DateType): string[] => {
 export const layoutConfig = (dateRange: DateType): LayoutConfig => {
   const range = giveRange(dateRange);
   return {
-    title: 'Blockchain',
+    ...defaultLayout,
     xaxis: {
       range,
       autorange: false,
@@ -23,10 +33,4 @@ export const layoutConfig = (dateRange: DateType): LayoutConfig => {
   };
 };
 
-export const defaultLayout = {
-  title: 'Blockchain',
-  xaxis: {
-    range: ['2023-04-03', '2023-04-10'],
-    autorange: false,
-  },
-};
+

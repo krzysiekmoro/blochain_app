@@ -1,15 +1,15 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
-import rawData from './data.json';
-import {dataFormatter} from './data-parser';
+import rawData from './data/data.json';
+import {dataFormatter} from './utils/data-parser';
 import {Chart} from './Chart';
 import {DateRange} from './DateRange';
-import {layoutConfig} from './layout-config';
+import {layoutConfig} from './utils/layout-config';
 import {StyledWrapper, StyledHeader} from './styles/components.styles';
 import {DateType} from './types/date-range';
 import {LayoutConfig} from './types/layout';
 import * as Plotly from 'plotly.js';
-import {defaultLayout} from './layout-config';
+import {defaultLayout} from './utils/layout-config';
 
 function App() {
   const [data, setData] = useState<Plotly.Data[]>([]);
