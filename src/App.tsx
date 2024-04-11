@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import rawData from './data.json';
@@ -11,7 +11,6 @@ import {DateType} from './types/date-range';
 import {LayoutConfig} from './types/layout';
 import * as Plotly from 'plotly.js';
 import {defaultLayout} from './layout-config';
-// import { loadData } from './data/dataHandler';
 
 function App() {
   const [data, setData] = useState<Plotly.Data[]>([]);
@@ -19,7 +18,6 @@ function App() {
   const [layout, setLayout] = useState<LayoutConfig>(defaultLayout);
 
   useEffect(() => {
-    // const apiData = loadData();
     setData(dataFormatter(rawData));
   }, []);
 

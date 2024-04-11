@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 const url =
-  'https://cors-anywhere.herokuapp.com/https://api.tokenguard.io/db-api/growth-index/basic-timeline-data';
+  'https://api.tokenguard.io/db-api/growth-index/basic-timeline-data';
 const config = {
   method: 'POST',
   body: {
